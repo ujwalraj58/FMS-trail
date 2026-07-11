@@ -196,6 +196,7 @@ footer {
 }
  
 .footer-links nav {
+    display: flex;
     margin-left: 0px;
 }
 
