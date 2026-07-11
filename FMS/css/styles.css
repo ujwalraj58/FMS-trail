@@ -1,5 +1,4 @@
 :root {
-    /* Brand colors */
     --navy: #0A2540;
     --navy-light: #13385E;
     --steel: #4A5B6C;
@@ -10,14 +9,12 @@
     --ink: #1B1F23;
     --border: #E1E5EA;
 
-    /* Typography scale */
     --fs-h1: 46px;
     --fs-h2: 32px;
     --fs-h3: 20px;
     --fs-body: 16px;
     --fs-small: 14px;
 
-    /* Effects */
     --shadow-card: 0 1px 2px rgba(10, 37, 64, 0.06), 0 2px 8px rgba(10, 37, 64, 0.06);
     --shadow-card-hover: 0 2px 4px rgba(10, 37, 64, 0.08), 0 8px 20px rgba(10, 37, 64, 0.10);
     --radius-sm: 6px;
@@ -31,7 +28,6 @@
     margin: auto;
 }
 
-/* Typography-led section title — bold navy heading + thin red underline accent */
 .section-title {
     color: var(--navy);
     font-size: 34px;
@@ -57,7 +53,6 @@
     border-radius: 2px;
 }
 
-/* Solid navy button, tight motion, uppercase micro-label */
 .btn {
     display: inline-block;
     margin: 0;
@@ -199,10 +194,15 @@ footer {
     font-size: 14px;
     max-width: 260px;
 }
+ 
+.footer-links nav {
+    margin-left: 0px;
+}
 
-.footer-links {
+.footer-links nav ul {
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
 }
 
 .footer-links h3 {
@@ -222,7 +222,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--white);
+    color: var(--navy);
 }
 
 .footer-info h3 {

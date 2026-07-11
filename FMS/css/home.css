@@ -1,9 +1,10 @@
 /* Hero — the ONE signature gradient moment on the page */
 .hero {
     background-image:
-        linear-gradient(180deg, rgba(10, 37, 64, 0.82), rgba(10, 37, 64, 0.55)),
-        linear-gradient(120deg, #16324f, #0A2540),
-        url("../assets/images/hero.jpg");
+    url("../assets/images/hero.jpg");
+        /* linear-gradient(180deg, rgba(10, 37, 64, 0.82), rgba(10, 37, 64, 0.55)),
+        linear-gradient(120deg, #16324f, #0A2540); */
+        
     background-size: cover;
     background-position: center;
     min-height: 420px;
