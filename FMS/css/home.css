@@ -1,0 +1,241 @@
+/* Hero — the ONE signature gradient moment on the page */
+.hero {
+    background-image:
+        linear-gradient(180deg, rgba(10, 37, 64, 0.82), rgba(10, 37, 64, 0.55)),
+        linear-gradient(120deg, #16324f, #0A2540),
+        url("../assets/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+}
+
+.hero h1 {
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    max-width: 640px;
+    margin: 0 0 24px;
+}
+
+.hero a {
+    width: fit-content;
+}
+
+.trust {
+    padding: 20px 0 60px;
+}
+
+.trust .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    margin: 20px auto;
+    height: fit-content;
+    background: var(--border);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    width: 100%;
+    background: var(--border);
+    margin: 0;
+}
+
+.stat-item {
+    margin: 0;
+    padding: 44px 20px;
+    color: var(--white);
+    text-align: center;
+    background: var(--navy);
+}
+
+.stat-item dt,
+.stat-item dd {
+    margin: 0;
+}
+
+.stat-item dt {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.stat-item dd {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--steel-light);
+    margin-top: 6px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 80px;
+    padding: 90px 0;
+    height: fit-content;
+}
+
+.about-text {
+    flex: 1;
+    display: block;
+}
+
+.about-text .section-title {
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.about-text .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+.about-text p {
+    color: var(--steel);
+}
+
+.about img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.services {
+    padding: 20px 0 60px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 10px 0;
+}
+
+.service-card {
+    padding: 32px 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--navy);
+}
+
+.service-card h3 {
+    text-align: center;
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 18px;
+    letter-spacing: -0.01em;
+}
+
+.service-card p {
+    text-align: justify;
+    color: var(--steel);
+    font-size: 15px;
+    margin: 0;
+}
+
+.gallery {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.gallery .section-title {
+    margin-bottom: 24px;
+}
+
+.gallery-btn-wrapper {
+    position: absolute;
+    right: 38px;
+    bottom: 40px;
+}
+
+.gallery-row {
+    width: 100%;
+    display: flex;
+    gap: 2px;
+}
+
+.gallery-item {
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.4s ease;
+}
+
+.gallery-item:hover {
+    flex: 2.2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.cta {
+    width: 100%;
+    background: linear-gradient(120deg, var(--navy), var(--navy-light));
+    padding: 60px 0;
+}
+
+.cta .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 0;
+}
+
+.cta-question {
+    max-width: 650px;
+}
+
+.cta-question h2 {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+}
+
+.cta-question p {
+    font-size: 14px;
+    color: var(--steel-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cta .btn {
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+.cta .btn:hover {
+    background: var(--accent-dark);
+}
