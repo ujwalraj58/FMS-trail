@@ -19,17 +19,33 @@
         <a href="index.html">
             <img src="assets/images/logo.png" alt="Front Man Solutions Logo">
         </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav aria-label="Primary Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <a href="contact.html" class="btn">Contact Us</a>
+        <div class="contact-btn">
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('header nav');
+
+            navToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+        </script>
     </header>
     <main>
         <section class="contact">
@@ -87,7 +103,7 @@
                         <h3>Visit our Office</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.7735902188285!2d78.50022619984763!3d17.4601405205164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a424abc9d51%3A0xc57798be3a11223c!2sLucid%20Medical%20Diagnostics%20%7C%20Karkhana%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1783707102600!5m2!1sen!2sin"
-                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </section>

@@ -16,11 +16,6 @@
     color: var(--steel-light);
 }
 
-.why-apply {
-    display: flex;
-    margin: 30px 0;
-}
-
 .careers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -63,9 +58,36 @@
     font-size: 15px;
 }
 
+
+.careers-form {
+    margin: 30px 0;
+}
+
+.apply-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.apply-image {
+    flex: 0.9;
+}
+
+.apply-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
 .form-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1.1;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
 }
 
 .form-wrapper form {
@@ -94,6 +116,7 @@
 .form-wrapper input,
 .form-wrapper select {
     flex: 1;
+    min-width: 0;
     padding: 11px 14px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
@@ -120,4 +143,29 @@
 
 .form-wrapper button {
     align-self: flex-end;
+}
+
+@media (max-width: 700px) {
+
+    .careers-hero {
+        padding: 24px 20px;
+    }
+
+    .form-wrapper form p {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .form-label {
+        flex: none;
+    }
+
+    .apply-wrapper {
+        flex-direction: column;
+    }
+
+    .apply-image img {
+        min-height: 260px;
+    }
 }

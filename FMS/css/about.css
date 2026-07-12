@@ -113,3 +113,21 @@
     color: var(--steel);
     font-size: 15px;
 }
+
+@media (max-width: 800px) {
+    .about-hero {
+        padding: 24px 20px;
+    }
+
+    .about-info {
+        flex-direction: column;
+    }
+
+    .about-info img {
+        width: 100%;
+    }
+
+    .vision-mission-wrapper {
+        flex-direction: column;
+    }
+}

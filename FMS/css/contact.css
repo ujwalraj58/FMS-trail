@@ -77,8 +77,8 @@
 }
 
 .form-map {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 60px;
     margin: 40px 0;
 }
@@ -139,6 +139,7 @@
 .form-wrapper input,
 .form-wrapper textarea {
     flex: 1;
+    min-width: 0;
     padding: 11px 14px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
@@ -158,4 +159,36 @@
 .form-wrapper button {
     align-self: flex-end;
 
+}
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        padding: 30px 20px;
+        min-height: 220px;
+    }
+
+    .form-map {
+        gap: 32px;
+    }
+
+    .form-wrapper form p {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .form-label {
+        flex: none;
+    }
+
+    .contact-map iframe {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 20px 16px;
+    }
 }

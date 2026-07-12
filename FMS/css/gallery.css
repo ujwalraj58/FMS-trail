@@ -66,18 +66,20 @@
 }
 
 @media (max-width: 600px) {
-     .swiper-slide {
+    .swiper-slide {
         width: 260px;
     }
+
     .swiper-slide img {
         height: 280px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 601px) {
     .swiper-slide {
         width: 380px;
     }
+
     .swiper-slide img {
         height: 380px;
     }

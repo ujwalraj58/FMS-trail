@@ -19,17 +19,33 @@
         <a href="index.html">
             <img src="assets/images/logo.png" alt="Front Man Solutions Logo">
         </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav aria-label="Primary Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="careers.html" class="active">Careers</a></li>
+                <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <a href="contact.html" class="btn">Contact Us</a>
+        <div class="contact-btn">
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('header nav');
+
+            navToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+        </script>
     </header>
     <main>
         <section class="careers-hero">
@@ -40,43 +56,46 @@
                 <a href="#apply" class="btn">Apply Now →</a>
             </div>
         </section>
-        <section class="why-apply">
-            <section class="values">
-                <div class="container">
-                    <h2 class="section-title">Why work with Us?</h2>
-                    <dl class="careers-grid">
-                        <div class="values-card">
-                            <dt>Professional Growth</dt>
-                            <dd>
-                                We provide continuous & corrective training and learning opportunities to build a
-                                rewarding
-                                career.
-                            </dd>
-                        </div>
-                        <div class="values-card">
-                            <dt>Integrity & Discipline</dt>
-                            <dd>
-                                We value honesty, responsibility, punctuality and commitment.
-                            </dd>
-                        </div>
-                        <div class="values-card">
-                            <dt>Supportive Team</dt>
-                            <dd>
-                                Work alongside experienced professionals in a
-                                respectful environment.
-                            </dd>
-                        </div>
-                        <div class="values-card">
-                            <dt>Trust & Safety</dt>
-                            <dd>
-                                We thrive in building client's trust and work towards a safer society.</dd>
-                        </div>
-                    </dl>
-                </div>
-            </section>
-            <section class="careers-form" id="apply">
-                <div class="container">
-                    <h2 class="section-title">Apply Today</h2>
+        <section class="values">
+            <div class="container">
+                <h2 class="section-title">Why work with Us?</h2>
+                <dl class="careers-grid">
+                    <div class="values-card">
+                        <dt>Professional Growth</dt>
+                        <dd>
+                            We provide continuous & corrective training and learning opportunities to build a
+                            rewarding
+                            career.
+                        </dd>
+                    </div>
+                    <div class="values-card">
+                        <dt>Integrity & Discipline</dt>
+                        <dd>
+                            We value honesty, responsibility, punctuality and commitment.
+                        </dd>
+                    </div>
+                    <div class="values-card">
+                        <dt>Supportive Team</dt>
+                        <dd>
+                            Work alongside experienced professionals in a
+                            respectful environment.
+                        </dd>
+                    </div>
+                    <div class="values-card">
+                        <dt>Trust & Safety</dt>
+                        <dd>
+                            We thrive in building client's trust and work towards a safer society.</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+        <section class="careers-form" id="apply">
+            <div class="container">
+                <h2 class="section-title">Apply Today</h2>
+                <div class="apply-wrapper">
+                    <div class="apply-image">
+                        <img src="assets/images/images5.jpg" alt="">
+                    </div>
                     <div class="form-wrapper">
                         <form>
                             <p>
@@ -141,7 +160,7 @@
                         </form>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
