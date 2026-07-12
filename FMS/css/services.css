@@ -6,6 +6,11 @@
     color: var(--steel);
 }
 
+.services {
+    margin: 30px 0;
+    padding: 20px;
+}
+
 .services-menu ul {
     list-style: none;
     margin: 20px 0;
@@ -19,7 +24,7 @@
 .services-menu a {
     display: inline-block;
     padding: 9px 20px;
-    color: var(--navy);
+    color: var(--steel-light);
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
@@ -27,13 +32,19 @@
     text-transform: uppercase;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
+    background:
+        linear-gradient(120deg, var(--navy), var(--navy-light));
     transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .services-menu a:hover {
-    color: var(--white);
-    background: var(--navy);
-    border-color: var(--navy);
+    color: var(--navy);
+    background: var(--accent-dark);
+    border-color: var(--steel);
+}
+
+.services-menu a:active {
+    transform: translateY(3px);
 }
 
 .menu-grid {

@@ -3,8 +3,9 @@
     --navy-light: #13385E;
     --steel: #4A5B6C;
     --steel-light: #E4E8EC;
-    --accent: #C8102E;
-    --accent-dark: #9E0C22;
+    --accent: #FF0026;
+    --accent-dark: #C8102E;
+    --gold: #FFD900;
     --white: #FFFFFF;
     --ink: #1B1F23;
     --border: #E1E5EA;
@@ -49,7 +50,7 @@
     transform: translateX(-50%);
     width: 44px;
     height: 3px;
-    background: var(--accent);
+    background: var(--accent-dark);
     border-radius: 2px;
 }
 
@@ -73,7 +74,7 @@
 }
 
 .btn:hover {
-    background: var(--accent);
+    background: var(--accent-dark);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(200, 16, 46, 0.25);
 }
@@ -92,7 +93,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.7;
     color: var(--ink);
 }
@@ -194,7 +195,7 @@ footer {
     font-size: 14px;
     max-width: 260px;
 }
- 
+
 .footer-links nav {
     display: flex;
     margin-left: 0px;
@@ -223,7 +224,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--navy);
+    color: var(--white);
 }
 
 .footer-info h3 {
@@ -241,8 +242,14 @@ footer {
     transition: color 0.2s ease;
 }
 
+.footer-info address ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .footer-info a:hover {
-    color: var(--white);
+    color: var(--accent);
 }
 
 .copyright {

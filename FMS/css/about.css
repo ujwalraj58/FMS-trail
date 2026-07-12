@@ -1,5 +1,14 @@
 .about-hero {
     text-align: center;
+    background: linear-gradient(120deg, var(--navy), var(--navy-light));
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    color: var(--gold);
+}
+
+.about-hero h1 {
+    color: var(--white);
 }
 
 .about-info {
@@ -30,7 +39,9 @@
 .mission {
     flex: 1;
     padding: 36px;
-    background: var(--white);
+    background: linear-gradient(120deg, var(--navy), var(--navy-light));
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
@@ -38,7 +49,7 @@
 
 .vision h2,
 .mission h2 {
-    color: var(--navy);
+    color: var(--gold);
     font-size: 20px;
     letter-spacing: -0.01em;
     margin: 0 0 14px;
@@ -48,8 +59,17 @@
 
 .vision p,
 .mission p {
-    color: var(--steel);
+    color: var(--steel-light);
     margin: 0;
+}
+
+.values {
+    margin-bottom: 30px;
+}
+
+.values h2 {
+    justify-self: center;
+    margin-bottom: 20px;
 }
 
 .values-grid {

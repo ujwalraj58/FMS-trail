@@ -17,7 +17,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="assets/images/logo.png" alt="Frontman Solutions Logo">
+            <img src="assets/images/logo.png" alt="Front Man Solutions Logo">
         </a>
         <nav aria-label="Primary Navigation">
             <ul>
@@ -40,99 +40,100 @@
                 </div>
                 <div class="services-menu">
                     <ul>
-                        <li><a href="#integrated">Integrated Security</a></li>
-                        <li><a href="#housekeeping">Housekeeping</a></li>
-                        <li><a href="#value-added">Value added Services</a></li>
-                        <li><a href="#fire-safety">Fire-fighting & Safety</a></li>
-                        <li><a href="#facility">Facility Management</a></li>
+                        <li><a class="filter-btn" data-filter="all">All</a></li>
+                        <li><a class="filter-btn" data-filter="integrated">Integrated Security</a></li>
+                        <li><a class="filter-btn" data-filter="housekeeping">Housekeeping</a></li>
+                        <li><a class="filter-btn" data-filter="value-added">Value added Services</a></li>
+                        <li><a class="filter-btn" data-filter="fire-safety">Fire-fighting & Safety</a></li>
+                        <li><a class="filter-btn" data-filter="facility">Facility Management</a></li>
                     </ul>
                 </div>
                 <div class="menu-grid">
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="integrated">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
-                        <h3>Commericial</h3>
+                    <article class="menu-item" data-category="integrated">
+                        <h3>Commercial</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="housekeeping">
                         <h3>Industrial</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="integrated">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="housekeeping">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="housekeeping">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="fire-safety">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="integrated">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="value-added facility">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="integrated">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="value-added">
+                        <h3>Commercial</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
+                            dolor
+                        </p>
+                    </article>
+                    <article class="menu-item" data-category="fire-safety facility">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="fire-safety">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="integrated facility">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
                         </p>
                     </article>
-                    <article class="menu-item">
-                        <h3>Residential</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
-                            dolor
-                        </p>
-                    </article>
-                    <article class="menu-item">
+                    <article class="menu-item" data-category="facility">
                         <h3>Residential</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia voluptatum minima,
                             dolor
@@ -141,12 +142,34 @@
                 </div>
             </div>
         </section>
+        <script>
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filter = button.getAttribute('data-filter');
+
+                    menuItems.forEach(item => {
+                        const rawCategory = item.getAttribute('data-category') || "";
+                        const itemCategories = rawCategory.split(' ');
+
+                        if (filter === 'all' || itemCategories.includes(filter)) {
+                            item.style.display = 'flex'; // Show matching items
+                        } else {
+                            item.style.display = 'none'; // Hide non-matching items
+                        }
+                    });
+                });
+            });
+        </script>
     </main>
 
     <footer>
         <section class="footer-content">
             <div class="footer-logo">
-                <img src="assets/images/logo.png" alt="Frontman Solutions Logo">
+                <img src="assets/images/footer-logo.png" alt="Front Man Solutions Logo">
                 <p>Our mission is to proactively address emerging security risks and pioneer new industry
                     advancements.
                 </p>
@@ -163,7 +186,7 @@
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                    
+
                     </ul>
                 </nav>
             </div>

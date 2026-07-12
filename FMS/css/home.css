@@ -1,10 +1,7 @@
 /* Hero — the ONE signature gradient moment on the page */
 .hero {
     background-image:
-    url("../assets/images/hero.jpg");
-        /* linear-gradient(180deg, rgba(10, 37, 64, 0.82), rgba(10, 37, 64, 0.55)),
-        linear-gradient(120deg, #16324f, #0A2540); */
-        
+        url("../assets/images/hero.jpg");
     background-size: cover;
     background-position: center;
     min-height: 420px;
@@ -233,10 +230,10 @@
 }
 
 .cta .btn {
-    background: var(--accent);
+    background: var(--accent-dark);
     flex-shrink: 0;
 }
 
 .cta .btn:hover {
-    background: var(--accent-dark);
+    background: var(--accent);
 }
